@@ -105,7 +105,7 @@ export default function HomePage() {
             <p>
               Je travaille en collaboration avec médecins et psychologues, et je
               reçois aussi bien à mon cabinet à Cannes qu&apos;à votre domicile
-              sur cannes et alentours.
+              dans tout le 06.
             </p>
             <Button href="/qui-suis-je" variant="secondary">
               En savoir plus sur mon parcours
@@ -153,8 +153,8 @@ export default function HomePage() {
       <Section
         tone="sand"
         eyebrow="Témoignages"
-        title="Ils ont fait le pas."
-        lead="Quelques retours et avis vérifiés Google"
+        title="Ils ont fait le pas !"
+        lead="Quelques retours et avis vérifiés sur Google"
       >
         <Testimonials />
       </Section>

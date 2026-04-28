@@ -40,6 +40,7 @@ export function Header() {
         </Nav>
 
         <Burger
+          $open={open}
           aria-label={open ? 'Fermer le menu' : 'Ouvrir le menu'}
           aria-expanded={open}
           onClick={() => setOpen((s) => !s)}

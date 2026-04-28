@@ -1,13 +1,13 @@
-import type { Metadata } from "next";
+import type { Metadata } from 'next';
 
-import { Section } from "@/components/Section/Section";
-import { Button } from "@/components/Button/Button";
-import { site } from "@/data/site";
+import { Section } from '@/components/Section/Section';
+import { Button } from '@/components/Button/Button';
+import { site } from '@/data/site';
 
 export const metadata: Metadata = {
-  title: "Contact & rendez-vous",
+  title: 'Contact & rendez-vous',
   description:
-    "Contactez Guylaine Demarle — hypnothérapeute à Cannes (06). Cabinet 91-93 rue Georges Clémenceau · 06 80 41 41 72 · Guylaine.demarle@wanadoo.fr.",
+    'Contactez Guylaine Demarle — hypnothérapeute à Cannes (06). Cabinet 91-93 rue Georges Clémenceau · 06 80 41 41 72 · Guylaine.demarle@wanadoo.fr.',
 };
 
 // Logo Facebook inline (SVG officiel, taille adaptable)
@@ -37,29 +37,31 @@ export default function ContactPage() {
       >
         <div
           style={{
-            display: "grid",
-            gap: "2.5rem",
-            gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))",
+            display: 'grid',
+            gap: '2.5rem',
+            gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))',
           }}
         >
           <div>
-            <h3 style={{ marginBottom: "1rem" }}>Au cabinet</h3>
+            <h3 style={{ marginBottom: '1rem' }}>Au cabinet</h3>
             <p style={{ lineHeight: 2 }}>
               {site.contact.address.street}
               <br />
               {site.contact.address.postalCode} {site.contact.address.city}
             </p>
-            <p style={{ marginTop: "1rem", color: "#5C6657" }}>{site.hours}</p>
+            <p style={{ marginTop: '1rem', color: '#5C6657' }}>
+              {site.hours}
+            </p>
           </div>
 
           <div>
-            <h3 style={{ marginBottom: "1rem" }}>Par téléphone</h3>
+            <h3 style={{ marginBottom: '1rem' }}>Par téléphone</h3>
             <p
               style={{
                 fontFamily: '"Cormorant Garamond", serif',
-                fontSize: "2rem",
-                color: "#5C6B4F",
-                marginBottom: "1rem",
+                fontSize: '2rem',
+                color: '#5C6B4F',
+                marginBottom: '1rem',
               }}
             >
               <a href={site.contact.phoneLink}>{site.contact.phone}</a>
@@ -70,14 +72,14 @@ export default function ContactPage() {
           </div>
 
           <div>
-            <h3 style={{ marginBottom: "1rem" }}>Par email</h3>
+            <h3 style={{ marginBottom: '1rem' }}>Par email</h3>
             <p
               style={{
                 fontFamily: '"Cormorant Garamond", serif',
-                fontSize: "1.5rem",
-                color: "#5C6B4F",
-                marginBottom: "1rem",
-                wordBreak: "break-word",
+                fontSize: '1.5rem',
+                color: '#5C6B4F',
+                marginBottom: '1rem',
+                wordBreak: 'break-word',
               }}
             >
               <a href={site.contact.emailLink}>{site.contact.email}</a>
@@ -88,7 +90,7 @@ export default function ContactPage() {
           </div>
 
           <div>
-            <h3 style={{ marginBottom: "1rem" }}>À domicile</h3>
+            <h3 style={{ marginBottom: '1rem' }}>À domicile</h3>
             <p style={{ lineHeight: 2 }}>
               {site.sessions.location}.
               <br />
@@ -101,21 +103,21 @@ export default function ContactPage() {
         {/* Bloc Facebook */}
         <div
           style={{
-            marginTop: "3rem",
-            paddingTop: "2rem",
-            borderTop: "1px solid #E8DDC9",
-            display: "flex",
-            flexWrap: "wrap",
-            alignItems: "center",
-            gap: "1rem",
+            marginTop: '3rem',
+            paddingTop: '2rem',
+            borderTop: '1px solid #E8DDC9',
+            display: 'flex',
+            flexWrap: 'wrap',
+            alignItems: 'center',
+            gap: '1rem',
           }}
         >
           <span
             style={{
-              fontSize: "0.875rem",
-              letterSpacing: "0.18em",
-              textTransform: "uppercase",
-              color: "#5C6B4F",
+              fontSize: '0.875rem',
+              letterSpacing: '0.18em',
+              textTransform: 'uppercase',
+              color: '#5C6B4F',
               fontWeight: 500,
             }}
           >
@@ -126,15 +128,15 @@ export default function ContactPage() {
             target="_blank"
             rel="noopener noreferrer"
             style={{
-              display: "inline-flex",
-              alignItems: "center",
-              gap: "0.5rem",
-              padding: "0.5rem 1rem",
-              borderRadius: "9999px",
-              background: "#5C6B4F",
-              color: "#FAF7F2",
+              display: 'inline-flex',
+              alignItems: 'center',
+              gap: '0.5rem',
+              padding: '0.5rem 1rem',
+              borderRadius: '9999px',
+              background: '#5C6B4F',
+              color: '#FAF7F2',
               fontWeight: 500,
-              transition: "all 250ms ease",
+              transition: 'all 250ms ease',
             }}
           >
             <FacebookIcon size={20} />
@@ -144,7 +146,7 @@ export default function ContactPage() {
       </Section>
 
       {/* Formulaire de contact (à connecter à Resend / Formspree plus tard) */}
-      {/* <Section
+      <Section
         tone="sand"
         narrow
         eyebrow="Ou par message"
@@ -199,7 +201,7 @@ export default function ContactPage() {
             Envoyer
           </Button>
         </form>
-      </Section> */}
+      </Section>
     </>
   );
 }

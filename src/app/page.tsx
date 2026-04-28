@@ -1,6 +1,7 @@
 import { Button } from '@/components/Button/Button';
 import { Hero } from '@/components/Hero/Hero';
 import { Section } from '@/components/Section/Section';
+import { Testimonials } from '@/components/Testimonials/Testimonials';
 import {
   BenefitCard,
   BenefitsGrid,
@@ -136,6 +137,16 @@ export default function HomePage() {
             </Step>
           ))}
         </Steps>
+      </Section>
+
+      {/* Témoignages */}
+      <Section
+        tone="sand"
+        eyebrow="Témoignages"
+        title="Ils ont fait le pas."
+        lead="Quelques retours de personnes accompagnées par Guylaine."
+      >
+        <Testimonials />
       </Section>
 
       {/* CTA final */}

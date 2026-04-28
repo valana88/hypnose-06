@@ -104,7 +104,7 @@ export default function HomePage() {
             <p>
               Je travaille en collaboration avec médecins et psychologues, et je
               reçois aussi bien à mon cabinet à Cannes qu&apos;à votre domicile
-              dans tout le 06.
+              sur Cannes et ses alentours.{" "}
             </p>
             <Button href="/qui-suis-je" variant="secondary">
               En savoir plus sur mon parcours

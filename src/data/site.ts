@@ -12,7 +12,8 @@ export const site = {
   contact: {
     phone: '06 80 41 41 72',
     phoneLink: 'tel:+33680414172',
-    email: 'contact@hypnose-06-guylaine-demarle.fr', // à confirmer
+    email: 'Guylaine.demarle@wanadoo.fr',
+    emailLink: 'mailto:Guylaine.demarle@wanadoo.fr',
     address: {
       street: '91-93 rue Georges Clémenceau',
       postalCode: '06400',
@@ -25,7 +26,8 @@ export const site = {
     location: 'Au cabinet à Cannes ou à votre domicile (06)',
   },
   social: {
-    facebook: 'https://www.facebook.com/p/Hypnose-06-Guylaine-Demarle-100063556181705/',
+    facebookUrl: 'https://www.facebook.com/Guylaine.demarle',
+    facebookHandle: 'Guylaine.demarle',
   },
 } as const;
 

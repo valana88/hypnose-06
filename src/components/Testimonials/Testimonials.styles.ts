@@ -52,7 +52,19 @@ export const Quote = styled.blockquote`
   font-size: ${({ theme }) => theme.fontSizes.xl};
   line-height: 1.5;
   color: ${({ theme }) => theme.colors.text};
-  margin: ${({ theme }) => `${theme.spacing.lg} 0 ${theme.spacing.lg}`};
+  margin: ${({ theme }) => `${theme.spacing.md} 0 ${theme.spacing.lg}`};
+`;
+
+// 5 étoiles dorées au-dessus de la citation
+export const Stars = styled.div`
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  font-size: ${({ theme }) => theme.fontSizes.lg};
+  letter-spacing: 0.15em;
+  color: #D4A24C; /* doré subtil, cohérent avec la palette zen/nature */
+  margin-top: ${({ theme }) => theme.spacing.lg};
+  line-height: 1;
 `;
 
 export const Author = styled.figcaption`

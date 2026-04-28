@@ -6,6 +6,7 @@ import {
   Grid,
   Name,
   Quote,
+  Stars,
 } from './Testimonials.styles';
 
 export function Testimonials() {
@@ -13,6 +14,9 @@ export function Testimonials() {
     <Grid>
       {testimonials.map((t, i) => (
         <Card key={i}>
+          <Stars aria-label="Note : 5 étoiles sur 5">
+            <span aria-hidden="true">★★★★★</span>
+          </Stars>
           <Quote>{t.quote}</Quote>
           <Author>
             <Name>{t.author}</Name>

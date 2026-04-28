@@ -1,66 +1,161 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+import { Button } from '@/components/Button/Button';
+import { Hero } from '@/components/Hero/Hero';
+import { Section } from '@/components/Section/Section';
+import {
+  BenefitCard,
+  BenefitsGrid,
+  CTAActions,
+  FinalCTA,
+  Icon,
+  Portrait,
+  ProfileLayout,
+  ProfileText,
+  Step,
+  Steps,
+} from './page.styles';
 
-export default function Home() {
+const benefits = [
+  {
+    icon: '◯',
+    title: 'Arrêt du tabac',
+    text: 'Une libération durable, sans frustration ni manque, en quelques séances ciblées.',
+  },
+  {
+    icon: '◍',
+    title: 'Stress & anxiété',
+    text: 'Apaiser le mental, retrouver du recul et un calme profond au quotidien.',
+  },
+  {
+    icon: '☾',
+    title: 'Sommeil',
+    text: 'Renouer avec un sommeil réparateur et des nuits sereines.',
+  },
+  {
+    icon: '✦',
+    title: 'Confiance en soi',
+    text: 'Lever les blocages, oser, prendre sa juste place — naturellement.',
+  },
+  {
+    icon: '↟',
+    title: 'Phobies',
+    text: 'Désensibiliser les peurs irrationnelles : avion, transports, animaux, foule…',
+  },
+  {
+    icon: '◉',
+    title: 'Comportements alimentaires',
+    text: 'Retrouver une relation apaisée avec la nourriture et son corps.',
+  },
+];
+
+const steps = [
+  {
+    title: 'Premier contact',
+    text: 'Un appel ou un message pour échanger sur votre situation et fixer un premier rendez-vous.',
+  },
+  {
+    title: 'Séance d\'accueil',
+    text: 'On définit ensemble votre objectif, je vous explique l\'hypnose, puis vous vivez votre première expérience.',
+  },
+  {
+    title: 'Accompagnement',
+    text: 'Quelques séances suffisent en général. Au cabinet à Cannes ou à votre domicile.',
+  },
+];
+
+export default function HomePage() {
   return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className={styles.intro}>
-          <h1>To get started, edit the page.tsx file.</h1>
+    <>
+      <Hero />
+
+      {/* Présentation rapide de Guylaine */}
+      <Section tone="cream">
+        <ProfileLayout>
+          <Portrait aria-hidden="true" />
+          <ProfileText>
+            <p
+              style={{
+                fontSize: '0.875rem',
+                letterSpacing: '0.22em',
+                textTransform: 'uppercase',
+                color: 'var(--accent, #5C6B4F)',
+                marginBottom: '0.5rem',
+              }}
+            >
+              Qui suis-je
+            </p>
+            <h2>Une présence soignante, un accompagnement humain.</h2>
+            <p>
+              Infirmière diplômée d&apos;État depuis de nombreuses années, je
+              me suis formée à l&apos;hypnose ericksonienne à l&apos;École
+              Supérieure d&apos;Hypnose Ericksonienne d&apos;Aix-en-Provence
+              pour apporter à mes patients un accompagnement plus profond,
+              respectueux du rythme de chacun.
+            </p>
+            <p>
+              Je travaille en collaboration avec médecins et psychologues, et
+              je reçois aussi bien à mon cabinet à Cannes qu&apos;à votre
+              domicile dans tout le 06.
+            </p>
+            <Button href="/qui-suis-je" variant="secondary">
+              En savoir plus sur mon parcours
+            </Button>
+          </ProfileText>
+        </ProfileLayout>
+      </Section>
+
+      {/* Bénéfices / indications */}
+      <Section
+        tone="sand"
+        eyebrow="Indications"
+        title="L'hypnose peut vous aider à…"
+        lead="Chaque accompagnement est personnalisé. Voici les motifs de consultation les plus fréquents."
+      >
+        <BenefitsGrid>
+          {benefits.map((b) => (
+            <BenefitCard key={b.title}>
+              <Icon aria-hidden="true">{b.icon}</Icon>
+              <h3>{b.title}</h3>
+              <p>{b.text}</p>
+            </BenefitCard>
+          ))}
+        </BenefitsGrid>
+      </Section>
+
+      {/* Comment ça se passe */}
+      <Section
+        tone="cream"
+        eyebrow="Le déroulement"
+        title="Comment se passe une séance ?"
+        lead="Une démarche simple et progressive, dans un cadre bienveillant."
+      >
+        <Steps>
+          {steps.map((s) => (
+            <Step key={s.title}>
+              <h3>{s.title}</h3>
+              <p>{s.text}</p>
+            </Step>
+          ))}
+        </Steps>
+      </Section>
+
+      {/* CTA final */}
+      <Section tone="sage" narrow>
+        <FinalCTA>
+          <h2>Prêt(e) à faire le premier pas ?</h2>
           <p>
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Learning
-            </a>{" "}
-            center.
+            Un rendez-vous d&apos;information ne vous engage à rien.
+            Échangeons simplement sur ce qui vous amène.
           </p>
-        </div>
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className={styles.secondary}
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
-    </div>
+          <CTAActions>
+            <Button href="/contact" variant="primary">
+              Réserver une séance
+            </Button>
+            <Button href="tel:+33680414172" variant="ghost">
+              06 80 41 41 72
+            </Button>
+          </CTAActions>
+        </FinalCTA>
+      </Section>
+    </>
   );
 }

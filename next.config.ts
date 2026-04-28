@@ -1,7 +1,12 @@
-import type { NextConfig } from "next";
+import type { NextConfig } from 'next';
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  // Active la compilation Styled Components côté SWC
+  // (génère les noms de classes stables pour le SSR)
+  compiler: {
+    styledComponents: true,
+  },
+  reactStrictMode: true,
 };
 
 export default nextConfig;

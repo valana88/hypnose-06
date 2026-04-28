@@ -53,7 +53,7 @@ export default function HypnosePage() {
   return (
     <>
       <Section
-        tone="cream"
+        tone="sage"
         narrow
         eyebrow="L'hypnose"
         title="Qu'est-ce que l'hypnose ericksonienne ?"
@@ -99,24 +99,6 @@ export default function HypnosePage() {
         </div>
       </Section>
 
-      <Section tone="sand" narrow>
-        <p
-          style={{
-            fontSize: "1rem",
-            fontStyle: "italic",
-            color: "var(--muted, #5C6657)",
-            marginBottom: "1.5rem",
-          }}
-        >
-          L&apos;hypnose ne se substitue jamais à un traitement médical en
-          cours. Elle vient en complément, en accord avec votre médecin traitant
-          si nécessaire.
-        </p>
-        <Button href="/contact" variant="primary">
-          Discuter de votre situation
-        </Button>
-      </Section>
-
       <Section
         tone="sand"
         narrow
@@ -150,6 +132,24 @@ export default function HypnosePage() {
         </p>
         <Button href="/contact" variant="primary">
           Prendre contact
+        </Button>
+      </Section>
+
+      <Section tone="sand" narrow>
+        <p
+          style={{
+            fontSize: "1rem",
+            fontStyle: "italic",
+            color: "var(--muted, #5C6657)",
+            marginBottom: "1.5rem",
+          }}
+        >
+          L&apos;hypnose ne se substitue jamais à un traitement médical en
+          cours. Elle vient en complément, en accord avec votre médecin traitant
+          si nécessaire.
+        </p>
+        <Button href="/contact" variant="primary">
+          Discuter de votre situation
         </Button>
       </Section>
     </>

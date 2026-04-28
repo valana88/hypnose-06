@@ -11,6 +11,7 @@ export const metadata: Metadata = {
 
 const categories = [
   {
+    icon: '◍',
     title: 'Émotions & mental',
     items: [
       'Stress, anxiété, angoisses',
@@ -20,6 +21,7 @@ const categories = [
     ],
   },
   {
+    icon: '◉',
     title: 'Habitudes & corps',
     items: [
       'Arrêt du tabac',
@@ -29,6 +31,7 @@ const categories = [
     ],
   },
   {
+    icon: '↟',
     title: 'Peurs & blocages',
     items: [
       'Phobies (avion, transports, animaux, foule…)',
@@ -98,14 +101,48 @@ export default function HypnosePage() {
         <div
           style={{
             display: 'grid',
-            gap: '2rem',
+            gap: '1.5rem',
             gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
           }}
         >
           {categories.map((cat) => (
-            <div key={cat.title}>
-              <h3 style={{ marginBottom: '0.75rem' }}>{cat.title}</h3>
-              <ul style={{ listStyle: 'none', lineHeight: 2 }}>
+            <div
+              key={cat.title}
+              style={{
+                background: '#FAF7F2',
+                padding: '2rem',
+                borderRadius: '16px',
+                border: '1px solid #E8DDC9',
+              }}
+            >
+              <div
+                style={{
+                  width: '48px',
+                  height: '48px',
+                  borderRadius: '9999px',
+                  background: '#F5EFE6',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  fontSize: '1.5rem',
+                  marginBottom: '1rem',
+                }}
+                aria-hidden="true"
+              >
+                {cat.icon}
+              </div>
+              <h3 style={{ color: '#5C6B4F', marginBottom: '0.75rem' }}>
+                {cat.title}
+              </h3>
+              <ul
+                style={{
+                  listStyle: 'none',
+                  lineHeight: 2,
+                  color: '#5C6657',
+                  padding: 0,
+                  margin: 0,
+                }}
+              >
                 {cat.items.map((it) => (
                   <li key={it}>— {it}</li>
                 ))}

@@ -39,26 +39,86 @@ export default function ContactPage() {
         <div
           style={{
             display: "grid",
-            gap: "2.5rem",
-            gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))",
+            gap: "1.5rem",
+            gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
           }}
         >
-          <div>
-            <h3 style={{ marginBottom: "1rem" }}>Au cabinet</h3>
-            <p style={{ lineHeight: 2 }}>
+          {/* Au cabinet */}
+          <div
+            style={{
+              background: "#FAF7F2",
+              padding: "2rem",
+              borderRadius: "16px",
+              border: "1px solid #E8DDC9",
+            }}
+          >
+            <div
+              style={{
+                width: "48px",
+                height: "48px",
+                borderRadius: "9999px",
+                background: "#F5EFE6",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                fontSize: "1.5rem",
+                marginBottom: "1rem",
+              }}
+              aria-hidden="true"
+            >
+              ⌂
+            </div>
+            <h3 style={{ color: "#5C6B4F", marginBottom: "0.75rem" }}>
+              Au cabinet
+            </h3>
+            <p style={{ lineHeight: 1.8, color: "#5C6657" }}>
               {site.contact.address.street}
               <br />
               {site.contact.address.postalCode} {site.contact.address.city}
             </p>
-            <p style={{ marginTop: "1rem", color: "#5C6657" }}>{site.hours}</p>
+            <p
+              style={{
+                marginTop: "0.75rem",
+                color: "#5C6657",
+                fontSize: "0.875rem",
+              }}
+            >
+              {site.hours}
+            </p>
           </div>
 
-          <div>
-            <h3 style={{ marginBottom: "1rem" }}>Par téléphone</h3>
+          {/* Par téléphone */}
+          <div
+            style={{
+              background: "#FAF7F2",
+              padding: "2rem",
+              borderRadius: "16px",
+              border: "1px solid #E8DDC9",
+            }}
+          >
+            <div
+              style={{
+                width: "48px",
+                height: "48px",
+                borderRadius: "9999px",
+                background: "#F5EFE6",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                fontSize: "1.5rem",
+                marginBottom: "1rem",
+              }}
+              aria-hidden="true"
+            >
+              ☏
+            </div>
+            <h3 style={{ color: "#5C6B4F", marginBottom: "0.75rem" }}>
+              Par téléphone
+            </h3>
             <p
               style={{
                 fontFamily: '"Cormorant Garamond", serif',
-                fontSize: "2rem",
+                fontSize: "1.75rem",
                 color: "#5C6B4F",
                 marginBottom: "1rem",
               }}
@@ -70,12 +130,38 @@ export default function ContactPage() {
             </Button>
           </div>
 
-          <div>
-            <h3 style={{ marginBottom: "1rem" }}>Par email</h3>
+          {/* Par email */}
+          <div
+            style={{
+              background: "#FAF7F2",
+              padding: "2rem",
+              borderRadius: "16px",
+              border: "1px solid #E8DDC9",
+            }}
+          >
+            <div
+              style={{
+                width: "48px",
+                height: "48px",
+                borderRadius: "9999px",
+                background: "#F5EFE6",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                fontSize: "1.5rem",
+                marginBottom: "1rem",
+              }}
+              aria-hidden="true"
+            >
+              ✉
+            </div>
+            <h3 style={{ color: "#5C6B4F", marginBottom: "0.75rem" }}>
+              Par email
+            </h3>
             <p
               style={{
                 fontFamily: '"Cormorant Garamond", serif',
-                fontSize: "1.5rem",
+                fontSize: "1.25rem",
                 color: "#5C6B4F",
                 marginBottom: "1rem",
                 wordBreak: "break-word",
@@ -88,9 +174,35 @@ export default function ContactPage() {
             </Button>
           </div>
 
-          <div>
-            <h3 style={{ marginBottom: "1rem" }}>À domicile</h3>
-            <p style={{ lineHeight: 2 }}>
+          {/* À domicile */}
+          <div
+            style={{
+              background: "#FAF7F2",
+              padding: "2rem",
+              borderRadius: "16px",
+              border: "1px solid #E8DDC9",
+            }}
+          >
+            <div
+              style={{
+                width: "48px",
+                height: "48px",
+                borderRadius: "9999px",
+                background: "#F5EFE6",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                fontSize: "1.5rem",
+                marginBottom: "1rem",
+              }}
+              aria-hidden="true"
+            >
+              ↗
+            </div>
+            <h3 style={{ color: "#5C6B4F", marginBottom: "0.75rem" }}>
+              À domicile
+            </h3>
+            <p style={{ lineHeight: 1.8, color: "#5C6657" }}>
               {site.sessions.location}.
               <br />
               N&apos;hésitez pas à m&apos;en parler lors de notre premier

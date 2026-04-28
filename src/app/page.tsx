@@ -1,5 +1,4 @@
 import Image from "next/image";
-
 import { Button } from "@/components/Button/Button";
 import { Hero } from "@/components/Hero/Hero";
 import { Section } from "@/components/Section/Section";
@@ -154,7 +153,7 @@ export default function HomePage() {
         tone="sand"
         eyebrow="Témoignages"
         title="Ils ont fait le pas."
-        lead="Quelques retours de personnes accompagnées par Guylaine."
+        lead="Quelques retours et avis vérifiés de personnes accompagnées par mes soins."
       >
         <Testimonials />
       </Section>

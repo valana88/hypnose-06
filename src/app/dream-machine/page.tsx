@@ -2,16 +2,7 @@ import type { Metadata } from 'next';
 
 import { Button } from '@/components/Button/Button';
 import { Section } from '@/components/Section/Section';
-import {
-  CTAActions,
-  DreamCard,
-  DreamGrid,
-  DreamStep,
-  DreamSteps,
-  DreamVisual,
-  FinalCTA,
-  Note,
-} from './page.styles';
+import { DreamVisual } from './page.styles';
 
 export const metadata: Metadata = {
   title: 'La Dreamachine — Une expérience sensorielle',
@@ -63,29 +54,23 @@ export default function DreamMachinePage() {
       {/* Hero / présentation */}
       <Section
         tone="cream"
+        narrow
         eyebrow="Une expérience sensorielle"
         title="La Dreamachine"
         lead="Un voyage intérieur par la lumière, en douceur, à mi-chemin entre la méditation et l'hypnose."
       >
         <DreamVisual aria-hidden="true" />
 
-        <p style={{ fontSize: '1.125rem', lineHeight: 1.8, maxWidth: '720px' }}>
+        <p style={{ fontSize: '1.125rem', marginBottom: '1.5rem' }}>
           Inspirée du dispositif imaginé par Brion Gysin dans les années 60,
-          la Dreamachine produit une pulsation lumineuse régulière qui,
+          la Dreamachine produit une <strong>pulsation lumineuse régulière</strong> qui,
           perçue les yeux fermés, induit un état modifié de conscience
           comparable à une méditation profonde. Aucun effort de
           concentration n&apos;est demandé : vous vous laissez simplement
           porter.
         </p>
 
-        <p
-          style={{
-            fontSize: '1.125rem',
-            lineHeight: 1.8,
-            maxWidth: '720px',
-            marginTop: '1rem',
-          }}
-        >
+        <p>
           Je vous propose cette expérience en séance individuelle, seule ou
           en complément d&apos;une démarche d&apos;hypnose ericksonienne,
           selon ce qui résonne pour vous.
@@ -95,65 +80,125 @@ export default function DreamMachinePage() {
       {/* Bénéfices */}
       <Section
         tone="sand"
+        narrow
         eyebrow="Pour qui, pour quoi"
         title="Les apports d'une séance"
         lead="Une parenthèse, un reset — accessible à toutes les personnes en bonne santé qui cherchent à ralentir."
       >
-        <DreamGrid>
+        <div
+          style={{
+            display: 'grid',
+            gap: '2rem',
+            gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
+          }}
+        >
           {benefits.map((b) => (
-            <DreamCard key={b.title}>
-              <h3>{b.title}</h3>
-              <p>{b.text}</p>
-            </DreamCard>
+            <div key={b.title}>
+              <h3 style={{ marginBottom: '0.75rem' }}>{b.title}</h3>
+              <p style={{ lineHeight: 1.7, color: '#5C6657' }}>{b.text}</p>
+            </div>
           ))}
-        </DreamGrid>
+        </div>
       </Section>
 
       {/* Déroulé */}
       <Section
         tone="cream"
+        narrow
         eyebrow="Le déroulé"
         title="Comment se passe une séance ?"
         lead="Environ 45 minutes, dans un cadre calme et sécurisé."
-        narrow
       >
-        <DreamSteps>
-          {steps.map((s) => (
-            <DreamStep key={s.title}>
-              <h3>{s.title}</h3>
-              <p>{s.text}</p>
-            </DreamStep>
+        <ol
+          style={{
+            listStyle: 'none',
+            display: 'grid',
+            gap: '1.5rem',
+            counterReset: 'step',
+            padding: 0,
+          }}
+        >
+          {steps.map((s, i) => (
+            <li
+              key={s.title}
+              style={{
+                position: 'relative',
+                paddingLeft: '3.5rem',
+              }}
+            >
+              <span
+                style={{
+                  position: 'absolute',
+                  left: 0,
+                  top: '-6px',
+                  fontFamily: '"Cormorant Garamond", serif',
+                  fontSize: '2.5rem',
+                  fontWeight: 300,
+                  color: '#93A87E',
+                  lineHeight: 1,
+                }}
+              >
+                {String(i + 1).padStart(2, '0')}
+              </span>
+              <h3 style={{ marginBottom: '0.25rem' }}>{s.title}</h3>
+              <p style={{ lineHeight: 1.6, color: '#5C6657' }}>{s.text}</p>
+            </li>
           ))}
-        </DreamSteps>
+        </ol>
 
-        <Note>
-          <h4>Bon à savoir</h4>
-          <p>
+        {/* Encart "bon à savoir" */}
+        <aside
+          style={{
+            background: '#F5EFE6',
+            borderLeft: '3px solid #C97B5A',
+            padding: '1.5rem',
+            borderRadius: '8px',
+            marginTop: '2rem',
+          }}
+        >
+          <h4
+            style={{
+              fontSize: '1rem',
+              textTransform: 'uppercase',
+              letterSpacing: '0.18em',
+              color: '#C97B5A',
+              marginBottom: '0.5rem',
+            }}
+          >
+            Bon à savoir
+          </h4>
+          <p style={{ color: '#5C6657', lineHeight: 1.7 }}>
             La Dreamachine n&apos;est pas recommandée aux personnes
-            épileptiques ou photosensibles. En cas de doute,
-            n&apos;hésitez pas à m&apos;en parler avant la séance — nous
-            adapterons l&apos;accompagnement.
+            épileptiques ou photosensibles. En cas de doute, n&apos;hésitez
+            pas à m&apos;en parler avant la séance — nous adapterons
+            l&apos;accompagnement.
           </p>
-        </Note>
+        </aside>
       </Section>
 
       {/* CTA final */}
       <Section tone="sage" narrow>
-        <FinalCTA>
-          <h2>Envie de tester l&apos;expérience ?</h2>
-          <p>
-            Réservez une séance découverte ou échangeons simplement par
-            téléphone pour voir si la Dreamachine vous correspond.
-          </p>
-          <CTAActions>
-            <Button href="/contact" variant="primary">
-              Réserver une séance
-            </Button>
-            <Button href="tel:+33680414172" variant="ghost">
-              06 80 41 41 72
-            </Button>
-          </CTAActions>
-        </FinalCTA>
+        <h2 style={{ marginBottom: '1rem', fontStyle: 'italic' }}>
+          Envie de tester l&apos;expérience ?
+        </h2>
+        <p style={{ marginBottom: '2rem', fontSize: '1.125rem' }}>
+          Réservez une séance découverte ou échangeons simplement par
+          téléphone pour voir si la Dreamachine vous correspond.
+        </p>
+        <div
+          style={{
+            display: 'flex',
+            flexWrap: 'wrap',
+            gap: '0.75rem',
+          }}
+        >
+          <Button href="/contact" variant="primary">
+            Réserver une séance
+          </Button>
+          <Button href="tel:+33680414172" variant="ghost">
+            06 80 41 41 72
+          </Button>
+        </div>
       </Section>
     </>
   );

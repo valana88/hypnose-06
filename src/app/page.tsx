@@ -152,7 +152,7 @@ export default function HomePage() {
       <Section
         tone="sand"
         eyebrow="Témoignages"
-        title="Ils ont fait le pas."
+        title="Ils ont fait le pas !"
         lead="Quelques retours et avis vérifiés de personnes accompagnées par mes soins."
       >
         <Testimonials />

@@ -257,7 +257,7 @@ export default function ContactPage() {
       </Section>
 
       {/* Formulaire de contact (à connecter à Resend / Formspree plus tard) */}
-      <Section
+      {/* <Section
         tone="sand"
         narrow
         eyebrow="Ou par message"
@@ -312,7 +312,7 @@ export default function ContactPage() {
             Envoyer
           </Button>
         </form>
-      </Section>
+      </Section> */}
     </>
   );
 }

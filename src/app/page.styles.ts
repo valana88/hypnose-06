@@ -105,7 +105,10 @@ export const ProfileLayout = styled.div`
   }
 `;
 
+// Conteneur du portrait — accueille une <Image fill> de next/image
+// Le dégradé sert de fallback pendant le chargement.
 export const Portrait = styled.div`
+  position: relative;
   aspect-ratio: 3 / 4;
   border-radius: ${({ theme }) => theme.radii.lg};
   background: linear-gradient(
@@ -114,6 +117,7 @@ export const Portrait = styled.div`
     ${({ theme }) => theme.colors.sageLight}
   );
   box-shadow: ${({ theme }) => theme.shadows.lg};
+  overflow: hidden;
 `;
 
 export const ProfileText = styled.div`

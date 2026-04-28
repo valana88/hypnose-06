@@ -1,4 +1,6 @@
-import { Button } from '@/components/Button/Button';
+import Image from "next/image";
+
+import { Button } from "@/components/Button/Button";
 import {
   Actions,
   Blob,
@@ -9,8 +11,9 @@ import {
   Lead,
   Tagline,
   Title,
-  Visual,
-} from './Hero.styles';
+  // Visual,
+} from "./Hero.styles";
+import { Portrait } from "@/app/page.styles";
 
 export function Hero() {
   return (
@@ -26,9 +29,8 @@ export function Hero() {
           </Title>
           <Lead>
             Guylaine Demarle, infirmière diplômée d&apos;État et maître
-            praticienne en hypnose, vous accompagne au cabinet ou à
-            domicile pour transformer ce qui vous freine — sereinement,
-            à votre rythme.
+            praticienne en hypnose, vous accompagne au cabinet ou à domicile
+            pour transformer ce qui vous freine — sereinement, à votre rythme.
           </Lead>
           <Actions>
             <Button href="/contact" variant="primary">
@@ -40,7 +42,17 @@ export function Hero() {
           </Actions>
         </Content>
 
-        <Visual aria-hidden="true" />
+        {/* <Visual aria-hidden="true" /> */}
+
+        <Portrait>
+          <Image
+            src="/images/hypnose.jpg"
+            alt="Retrouvez votre équilibre intérieur"
+            fill
+            sizes="(max-width: 768px) 100vw, 40vw"
+            style={{ objectFit: "cover" }}
+          />
+        </Portrait>
       </Inner>
     </HeroWrapper>
   );

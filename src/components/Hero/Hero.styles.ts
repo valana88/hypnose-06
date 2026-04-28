@@ -20,7 +20,6 @@ export const HeroWrapper = styled.section`
   }
 `;
 
-// Élément décoratif (cercle organique en arrière-plan)
 export const Blob = styled.div`
   position: absolute;
   top: -200px;
@@ -117,7 +116,7 @@ export const Actions = styled.div`
   gap: ${({ theme }) => theme.spacing.sm};
 `;
 
-// Visuel à droite (placeholder élégant en attendant une vraie photo)
+// Visuel à droite : dégradé décoratif en attendant une vraie photo dédiée au hero
 export const Visual = styled.div`
   position: relative;
   aspect-ratio: 4 / 5;
@@ -135,7 +134,6 @@ export const Visual = styled.div`
     display: block;
   }
 
-  /* Citation flottante */
   &:after {
     content: '« L\\'inconscient sait ce dont vous avez besoin. »';
     position: absolute;

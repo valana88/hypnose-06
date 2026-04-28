@@ -49,7 +49,7 @@ src/
 │   ├── robots.ts
 │   ├── qui-suis-je/page.tsx
 │   ├── hypnose/page.tsx
-│   ├── indications/page.tsx
+│   ├── dream-machine/page.tsx
 │   ├── tarifs/page.tsx
 │   ├── faq/page.tsx
 │   ├── contact/page.tsx

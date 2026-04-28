@@ -11,40 +11,30 @@ export const metadata: Metadata = {
 
 const categories = [
   {
-    title: "Addictions & comportements",
-    items: [
-      "Arrêt du tabac",
-      "Comportements alimentaires (compulsions, surpoids)",
-      "Dépendances (sucre, écrans, alcool…)",
-      "Tics, onychophagie",
-    ],
-  },
-  {
     title: "Émotions & mental",
     items: [
-      "Stress, anxiété généralisée",
-      "Burn-out, surmenage",
+      "Stress, anxiété, angoisses",
       "Manque de confiance en soi",
-      "Crises d'angoisse, panique",
-      "Deuils, séparations difficiles",
+      "Deuil & émotions difficiles",
+      "Préparation mentale (examen, prise de parole)",
     ],
   },
   {
-    title: "Sommeil & corps",
+    title: "Habitudes & corps",
     items: [
-      "Insomnies, troubles du sommeil",
-      "Douleurs chroniques",
-      "Préparation à un examen, à un accouchement",
-      "Préparation mentale sportive",
+      "Arrêt du tabac",
+      "Comportements alimentaires",
+      "Troubles du sommeil",
+      "Douleurs chroniques (en complément médical)",
     ],
   },
   {
-    title: "Peurs & phobies",
+    title: "Peurs & blocages",
     items: [
-      "Phobie de l'avion, des transports",
-      "Peur de parler en public",
-      "Phobies animales",
-      "Claustrophobie, agoraphobie",
+      "Phobies (avion, transports, animaux, foule…)",
+      "Schémas répétitifs",
+      "Inhibition, blocages personnels",
+      "Estime de soi",
     ],
   },
 ];
@@ -52,6 +42,7 @@ const categories = [
 export default function HypnosePage() {
   return (
     <>
+      {/* Présentation de l'hypnose */}
       <Section
         tone="sage"
         narrow
@@ -73,8 +64,10 @@ export default function HypnosePage() {
         </p>
       </Section>
 
+      {/* Indications */}
       <Section
         tone="cream"
+        narrow
         eyebrow="Indications"
         title="Pour qui, pour quoi ?"
         lead="L'hypnose ericksonienne s'adresse à toute personne — adulte, adolescent, enfant — qui souhaite avancer sur un point précis. Voici les motifs les plus fréquents."
@@ -97,8 +90,20 @@ export default function HypnosePage() {
             </div>
           ))}
         </div>
+
+        <p
+          style={{
+            marginTop: "2rem",
+            fontStyle: "italic",
+            color: "#5C6657",
+          }}
+        >
+          Cette liste n&apos;est pas exhaustive. Si votre situation n&apos;y
+          figure pas, n&apos;hésitez pas à m&apos;en parler.
+        </p>
       </Section>
 
+      {/* Idées reçues */}
       <Section
         tone="sand"
         narrow
@@ -122,6 +127,7 @@ export default function HypnosePage() {
         </p>
       </Section>
 
+      {/* CTA final */}
       <Section tone="sage" narrow>
         <h2 style={{ marginBottom: "1rem", fontStyle: "italic" }}>
           Une question, un doute ?
@@ -132,24 +138,6 @@ export default function HypnosePage() {
         </p>
         <Button href="/contact" variant="primary">
           Prendre contact
-        </Button>
-      </Section>
-
-      <Section tone="sand" narrow>
-        <p
-          style={{
-            fontSize: "1rem",
-            fontStyle: "italic",
-            color: "var(--muted, #5C6657)",
-            marginBottom: "1.5rem",
-          }}
-        >
-          L&apos;hypnose ne se substitue jamais à un traitement médical en
-          cours. Elle vient en complément, en accord avec votre médecin traitant
-          si nécessaire.
-        </p>
-        <Button href="/contact" variant="primary">
-          Discuter de votre situation
         </Button>
       </Section>
     </>

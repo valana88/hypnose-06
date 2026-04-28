@@ -1,6 +1,7 @@
-import type { Metadata } from "next";
-import { Button } from "@/components/Button/Button";
-import { Section } from "@/components/Section/Section";
+import type { Metadata } from 'next';
+
+import { Button } from '@/components/Button/Button';
+import { Section } from '@/components/Section/Section';
 import {
   CTAActions,
   DreamCard,
@@ -10,49 +11,49 @@ import {
   DreamVisual,
   FinalCTA,
   Note,
-} from "./page.styles";
+} from './page.styles';
 
 export const metadata: Metadata = {
-  title: "La Dreamachine — Une expérience sensorielle",
+  title: 'La Dreamachine — Une expérience sensorielle',
   description:
-    "Découvrez la Dreamachine, une expérience de relaxation profonde par stimulation lumineuse, en complément de l'hypnose ericksonienne — Cabinet de Guylaine Demarle, Cannes (06).",
+    'Découvrez la Dreamachine, une expérience de relaxation profonde par stimulation lumineuse, en complément de l\'hypnose ericksonienne — Cabinet de Guylaine Demarle, Cannes (06).',
 };
 
 const benefits = [
   {
-    title: "Détente profonde",
-    text: "Un lâcher-prise rapide, idéal en complément ou en préparation d'une séance d'hypnose.",
+    title: 'Détente profonde',
+    text: 'Un lâcher-prise rapide, idéal en complément ou en préparation d\'une séance d\'hypnose.',
   },
   {
-    title: "Apaisement mental",
-    text: "La pulsation lumineuse calme l'agitation mentale et invite à un état méditatif naturel.",
+    title: 'Apaisement mental',
+    text: 'La pulsation lumineuse calme l\'agitation mentale et invite à un état méditatif naturel.',
   },
   {
-    title: "Créativité & imaginaire",
-    text: "Les yeux fermés, des formes géométriques apparaissent : un voyage intérieur unique à chacun.",
+    title: 'Créativité & imaginaire',
+    text: 'Les yeux fermés, des formes géométriques apparaissent : un voyage intérieur unique à chacun.',
   },
   {
-    title: "Sommeil & récupération",
-    text: "Particulièrement indiquée en cas de fatigue, troubles du sommeil ou stress accumulé.",
+    title: 'Sommeil & récupération',
+    text: 'Particulièrement indiquée en cas de fatigue, troubles du sommeil ou stress accumulé.',
   },
 ];
 
 const steps = [
   {
-    title: "Installation",
-    text: "Vous vous installez confortablement, allongé(e) ou semi-assis(e), dans une lumière tamisée. On en profite pour échanger sur vos attentes.",
+    title: 'Installation',
+    text: 'Vous vous installez confortablement, allongé(e) ou semi-assis(e), dans une lumière tamisée. On en profite pour échanger sur vos attentes.',
   },
   {
-    title: "Mise en place",
-    text: "La Dreamachine est positionnée à courte distance. Yeux fermés, vous percevez la pulsation lumineuse à travers les paupières — sans aucun effort.",
+    title: 'Mise en place',
+    text: 'La Dreamachine est positionnée à courte distance. Yeux fermés, vous percevez la pulsation lumineuse à travers les paupières — sans aucun effort.',
   },
   {
-    title: "Voyage intérieur",
-    text: "Pendant 15 à 25 minutes, vous laissez venir : couleurs, formes, sensations. Chaque expérience est différente, et toutes sont valides.",
+    title: 'Voyage intérieur',
+    text: 'Pendant 15 à 25 minutes, vous laissez venir : couleurs, formes, sensations. Chaque expérience est différente, et toutes sont valides.',
   },
   {
-    title: "Retour & échange",
-    text: "On reprend doucement contact avec l'instant, et on partage si vous le souhaitez. La séance peut se prolonger par un temps d'hypnose ericksonienne.",
+    title: 'Retour & échange',
+    text: 'On reprend doucement contact avec l\'instant, et on partage si vous le souhaitez. La séance peut se prolonger par un temps d\'hypnose ericksonienne.',
   },
 ];
 
@@ -68,25 +69,26 @@ export default function DreamMachinePage() {
       >
         <DreamVisual aria-hidden="true" />
 
-        <p style={{ fontSize: "1.125rem", lineHeight: 1.8, maxWidth: "720px" }}>
-          Inspirée du dispositif imaginé par Brion Gysin dans les années 60, la
-          Dreamachine produit une pulsation lumineuse régulière qui, perçue les
-          yeux fermés, induit un état modifié de conscience comparable à une
-          méditation profonde. Aucun effort de concentration n&apos;est demandé
-          : vous vous laissez simplement porter.
+        <p style={{ fontSize: '1.125rem', lineHeight: 1.8, maxWidth: '720px' }}>
+          Inspirée du dispositif imaginé par Brion Gysin dans les années 60,
+          la Dreamachine produit une pulsation lumineuse régulière qui,
+          perçue les yeux fermés, induit un état modifié de conscience
+          comparable à une méditation profonde. Aucun effort de
+          concentration n&apos;est demandé : vous vous laissez simplement
+          porter.
         </p>
 
         <p
           style={{
-            fontSize: "1.125rem",
+            fontSize: '1.125rem',
             lineHeight: 1.8,
-            maxWidth: "720px",
-            marginTop: "1rem",
+            maxWidth: '720px',
+            marginTop: '1rem',
           }}
         >
-          Je vous propose cette expérience en séance individuelle, seule ou en
-          complément d&apos;une démarche d&apos;hypnose ericksonienne, selon ce
-          qui résonne pour vous.
+          Je vous propose cette expérience en séance individuelle, seule ou
+          en complément d&apos;une démarche d&apos;hypnose ericksonienne,
+          selon ce qui résonne pour vous.
         </p>
       </Section>
 
@@ -127,9 +129,10 @@ export default function DreamMachinePage() {
         <Note>
           <h4>Bon à savoir</h4>
           <p>
-            La Dreamachine n&apos;est pas recommandée aux personnes épileptiques
-            ou photosensibles. En cas de doute, n&apos;hésitez pas à m&apos;en
-            parler avant la séance — nous adapterons l&apos;accompagnement.
+            La Dreamachine n&apos;est pas recommandée aux personnes
+            épileptiques ou photosensibles. En cas de doute,
+            n&apos;hésitez pas à m&apos;en parler avant la séance — nous
+            adapterons l&apos;accompagnement.
           </p>
         </Note>
       </Section>

@@ -74,42 +74,6 @@ export default function HypnosePage() {
       </Section>
 
       <Section
-        tone="sand"
-        narrow
-        eyebrow="Idées reçues"
-        title="Vous gardez le contrôle, toujours."
-      >
-        <p style={{ marginBottom: "1rem" }}>
-          <strong>Non, vous ne dormez pas.</strong> Vous restez parfaitement
-          conscient(e), vous entendez tout, vous pouvez parler, ouvrir les yeux
-          à tout moment.
-        </p>
-        <p style={{ marginBottom: "1rem" }}>
-          <strong>Non, je ne vous &quot;manipule&quot; pas.</strong> Aucune
-          suggestion contraire à vos valeurs ne sera jamais acceptée par votre
-          inconscient. Vous gardez le contrôle.
-        </p>
-        <p>
-          <strong>Non, ce n&apos;est pas magique.</strong> C&apos;est un travail
-          thérapeutique sérieux, qui s&apos;appuie sur ce que vous êtes prêt(e)
-          à transformer.
-        </p>
-      </Section>
-
-      <Section tone="sage" narrow>
-        <h2 style={{ marginBottom: "1rem", fontStyle: "italic" }}>
-          Une question, un doute ?
-        </h2>
-        <p style={{ marginBottom: "2rem", fontSize: "1.125rem" }}>
-          Le mieux, c&apos;est encore d&apos;en parler. Un premier échange ne
-          vous engage à rien.
-        </p>
-        <Button href="/contact" variant="primary">
-          Prendre contact
-        </Button>
-      </Section>
-
-      <Section
         tone="cream"
         eyebrow="Indications"
         title="Pour qui, pour quoi ?"
@@ -150,6 +114,42 @@ export default function HypnosePage() {
         </p>
         <Button href="/contact" variant="primary">
           Discuter de votre situation
+        </Button>
+      </Section>
+
+      <Section
+        tone="sand"
+        narrow
+        eyebrow="Idées reçues"
+        title="Vous gardez le contrôle, toujours."
+      >
+        <p style={{ marginBottom: "1rem" }}>
+          <strong>Non, vous ne dormez pas.</strong> Vous restez parfaitement
+          conscient(e), vous entendez tout, vous pouvez parler, ouvrir les yeux
+          à tout moment.
+        </p>
+        <p style={{ marginBottom: "1rem" }}>
+          <strong>Non, je ne vous &quot;manipule&quot; pas.</strong> Aucune
+          suggestion contraire à vos valeurs ne sera jamais acceptée par votre
+          inconscient. Vous gardez le contrôle.
+        </p>
+        <p>
+          <strong>Non, ce n&apos;est pas magique.</strong> C&apos;est un travail
+          thérapeutique sérieux, qui s&apos;appuie sur ce que vous êtes prêt(e)
+          à transformer.
+        </p>
+      </Section>
+
+      <Section tone="sage" narrow>
+        <h2 style={{ marginBottom: "1rem", fontStyle: "italic" }}>
+          Une question, un doute ?
+        </h2>
+        <p style={{ marginBottom: "2rem", fontSize: "1.125rem" }}>
+          Le mieux, c&apos;est encore d&apos;en parler. Un premier échange ne
+          vous engage à rien.
+        </p>
+        <Button href="/contact" variant="primary">
+          Prendre contact
         </Button>
       </Section>
     </>

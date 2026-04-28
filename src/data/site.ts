@@ -38,7 +38,7 @@ export const nav = [
   { label: "Qui suis-je", href: "/qui-suis-je" },
   { label: "L'hypnose", href: "/hypnose" },
   { label: "Dreamachine", href: "/dream-machine" },
-  { label: "Indications", href: "/indications" },
+  // { label: "Indications", href: "/indications" },
   { label: "Tarifs", href: "/tarifs" },
   { label: "FAQ", href: "/faq" },
   { label: "Contact", href: "/contact" },

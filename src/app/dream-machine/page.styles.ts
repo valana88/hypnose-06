@@ -1,8 +1,8 @@
-'use client';
+"use client";
 
-import styled, { keyframes } from 'styled-components';
+import styled, { keyframes } from "styled-components";
 
-// Animation lente de pulsation lumineuse — évoque la Dreamachine
+// Animation lente de pulsation lumineuse — évoque la Dream-machine
 const pulse = keyframes`
   0%, 100% { opacity: 0.55; transform: translate(-50%, -50%) scale(1); }
   50%      { opacity: 1;    transform: translate(-50%, -50%) scale(1.03); }
@@ -16,18 +16,18 @@ export const DreamVisual = styled.div`
   aspect-ratio: 16 / 9;
   border-radius: ${({ theme }) => theme.radii.lg};
   background: radial-gradient(
-      circle at 50% 50%,
-      ${({ theme }) => theme.colors.terracottaLight} 0%,
-      ${({ theme }) => theme.colors.sand} 35%,
-      ${({ theme }) => theme.colors.sageDark} 100%
-    );
+    circle at 50% 50%,
+    ${({ theme }) => theme.colors.terracottaLight} 0%,
+    ${({ theme }) => theme.colors.sand} 35%,
+    ${({ theme }) => theme.colors.sageDark} 100%
+  );
   box-shadow: ${({ theme }) => theme.shadows.lg};
   overflow: hidden;
   margin-bottom: ${({ theme }) => theme.spacing.xl};
 
   /* Halo pulsé au centre */
   &:before {
-    content: '';
+    content: "";
     position: absolute;
     top: 50%;
     left: 50%;
@@ -46,7 +46,7 @@ export const DreamVisual = styled.div`
 
   /* Citation discrète */
   &:after {
-    content: '« Fermez les yeux. Laissez les formes venir à vous. »';
+    content: "« Fermez les yeux. Laissez les formes venir à vous. »";
     position: absolute;
     bottom: ${({ theme }) => theme.spacing.lg};
     left: ${({ theme }) => theme.spacing.lg};

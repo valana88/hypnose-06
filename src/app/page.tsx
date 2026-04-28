@@ -1,4 +1,5 @@
 import Image from "next/image";
+
 import { Button } from "@/components/Button/Button";
 import { Hero } from "@/components/Hero/Hero";
 import { Section } from "@/components/Section/Section";
@@ -104,7 +105,7 @@ export default function HomePage() {
             <p>
               Je travaille en collaboration avec médecins et psychologues, et je
               reçois aussi bien à mon cabinet à Cannes qu&apos;à votre domicile
-              sur Cannes et ses alentours.{" "}
+              sur Cannes et ses alentours.
             </p>
             <Button href="/qui-suis-je" variant="secondary">
               En savoir plus sur mon parcours

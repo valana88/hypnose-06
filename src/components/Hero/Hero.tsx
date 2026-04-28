@@ -9,7 +9,7 @@ import {
   Lead,
   Tagline,
   Title,
-  Visual,
+  // Visual,
 } from "./Hero.styles";
 import Image from "next/image";
 import { Portrait } from "@/app/page.styles";

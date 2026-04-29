@@ -64,7 +64,7 @@ export default function DreamMachinePage() {
         <p style={{ fontSize: "1.125rem", marginBottom: "1.5rem" }}>
           Inspirée du dispositif imaginé par Brion Gysin dans les années 60, la
           Dream-machine produit une{" "}
-          <strong>pulsation lumineuse régulière</strong> qui, perçue les yeux
+          <strong>pulsation lumineuse régulière </strong> qui, perçue les yeux
           fermés, induit un état modifié de conscience comparable à une
           méditation profonde. Aucun effort de concentration n&apos;est demandé
           : vous vous laissez simplement porter.

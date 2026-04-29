@@ -27,7 +27,8 @@ export const site = {
     location: "Au cabinet à Cannes ou à votre domicile (06)",
   },
   social: {
-    facebookUrl: "https://www.facebook.com/Guylaine.demarle",
+    facebookUrl:
+      "https://www.facebook.com/guylaine.demarle.9?mibextid=wwXIfr&rdid=PIQiKD9SlmjHcpLV&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F18d1ogXtZR%2F%3Fmibextid%3DwwXIfr#",
     facebookHandle: "Guylaine.demarle",
   },
 } as const;

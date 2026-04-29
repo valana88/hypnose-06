@@ -74,7 +74,7 @@ export default function HomePage() {
         <ProfileLayout>
           <Portrait>
             <Image
-              src="/images/guylaine.jpg"
+              src="/images/guylaine.jpeg"
               alt="Guylaine Demarle, hypnothérapeute à Cannes"
               fill
               sizes="(max-width: 768px) 100vw, 40vw"

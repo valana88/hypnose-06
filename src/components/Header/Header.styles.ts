@@ -51,10 +51,16 @@ export const Brand = styled(Link)`
 `;
 
 export const Nav = styled.nav<{ $open: boolean }>`
-  /* ========== MOBILE : panneau plein écran ========== */
+  /* ========== MOBILE : panneau qui tient exactement sur 1 écran ========== */
   display: ${({ $open }) => ($open ? 'flex' : 'none')};
   position: fixed;
   inset: 0;                     /* couvre tout l'écran */
+  /* Hauteur figée à 1 viewport : 100dvh prend en compte la barre d'adresse mobile,
+     100vh sert de fallback pour les navigateurs plus anciens */
+  height: 100vh;
+  height: 100dvh;
+  max-height: 100vh;
+  max-height: 100dvh;
   z-index: 99;                  /* au-dessus du contenu, sous le HeaderWrapper (100) */
   background: ${({ theme }) => theme.colors.cream};  /* cream/beige, opaque */
   box-shadow: ${({ theme }) => theme.shadows.lg};
@@ -63,20 +69,25 @@ export const Nav = styled.nav<{ $open: boolean }>`
   align-items: center;
   justify-content: flex-start;
 
-  /* Le menu commence SOUS la topbar (~72px) */
-  padding: calc(72px + ${({ theme }) => theme.spacing.xl})
-    ${({ theme }) => theme.spacing.lg}
-    ${({ theme }) => theme.spacing['2xl']};
-  gap: ${({ theme }) => theme.spacing.lg};
+  /* Le menu commence juste sous la topbar (~72px) — catégories remontées */
+  padding: calc(72px + ${({ theme }) => theme.spacing.xs})
+    ${({ theme }) => theme.spacing.md}
+    ${({ theme }) => theme.spacing.md};
+  /* Écart entre catégories réduit pour tout faire tenir sur 100vh */
+  gap: ${({ theme }) => theme.spacing.sm};
 
-  /* Permet de scroller dans le menu si beaucoup de liens */
+  /* Sécurité pour les très petits écrans : on autorise un scroll discret
+     plutôt que de couper le contenu */
   overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
 
   /* ========== DESKTOP ≥ lg : barre horizontale classique ========== */
   ${({ theme }) => theme.media.lg} {
     display: flex;
     position: static;
     inset: auto;
+    height: auto;
+    max-height: none;
     z-index: auto;
     background: transparent;
     box-shadow: none;

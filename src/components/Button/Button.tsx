@@ -1,9 +1,7 @@
-'use client';
+import React from "react";
+import { StyledButton, StyledLink } from "./Button.styles";
 
-import React from 'react';
-import { StyledButton, StyledLink } from './Button.styles';
-
-export type ButtonVariant = 'primary' | 'secondary' | 'ghost';
+export type ButtonVariant = "primary" | "secondary" | "ghost";
 
 type CommonProps = {
   variant?: ButtonVariant;
@@ -23,11 +21,16 @@ type ButtonAsLink = CommonProps & {
 export type ButtonProps = ButtonAsButton | ButtonAsLink;
 
 export function Button(props: ButtonProps) {
-  const { variant = 'primary', fullWidth, children } = props;
+  const { variant = "primary", fullWidth, children } = props;
 
-  if ('href' in props && props.href) {
+  if ("href" in props && props.href) {
     return (
-      <StyledLink href={props.href} $variant={variant} $fullWidth={fullWidth}>
+      <StyledLink
+        href={props.href}
+        $variant={variant}
+        $fullWidth={fullWidth}
+        data-variant={variant}
+      >
         {children}
       </StyledLink>
     );
@@ -35,7 +38,12 @@ export function Button(props: ButtonProps) {
 
   const { href: _href, ...buttonProps } = props as ButtonAsButton;
   return (
-    <StyledButton {...buttonProps} $variant={variant} $fullWidth={fullWidth}>
+    <StyledButton
+      {...buttonProps}
+      $variant={variant}
+      $fullWidth={fullWidth}
+      data-variant={variant}
+    >
       {children}
     </StyledButton>
   );
